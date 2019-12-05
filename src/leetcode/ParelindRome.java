@@ -50,6 +50,9 @@ public class ParelindRome {
       reverseX = reverseX * 10 + longX % 10;
       longX = longX / 10;
     }
+    if (reverseX > Integer.MAX_VALUE || reverseX < Integer.MIN_VALUE) {
+      throw new IllegalArgumentException();
+    }
     return reverseX == x;
   }
 
