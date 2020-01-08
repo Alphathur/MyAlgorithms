@@ -123,6 +123,20 @@ public class CycleLinkedList {
     return false;
   }
 
+  public boolean hasCycle2(ListNode head) {
+    ListNode slow = head;
+    ListNode fast = head;
+    while (fast != null && fast.next != null) {
+      fast = fast.next.next;
+      slow = slow.next;
+      if (fast == slow) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+
   /**
    * 方案二：Set 容器法，HashSet的add方法用来判断一个元素是否在容器中，如果在，则不添加，返回false，如果不在，则添加，并返回true
    *
