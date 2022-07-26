@@ -19,12 +19,12 @@ package leetcode;
 * 
 * char 转成 int 不能直接强转，char本身对应一个int数字，强转会得到ASCII码，正确的转换方式是: c - '0' 或者 Integer.parseInt(s)
 * Integer.MAX_VALUE + 1 会得到int的最小值是负数，如果换成Integer.MAX_VALUE + 1L则依然得到long的一个正数
-* @param str
+* @param
 * @return
 */
 public class MyAtoi {
 	public int solution(String str) {
-		if (str.isBlank()) {
+		if (str == null || str.length() == 0) {
 			return 0;
 		}
 		str = str.trim();
